@@ -1,0 +1,72 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">
+    ¡Bienvenido! 
+    <p class="subTitle"></p>
+  </ion-title>
+
+
+
+  <ion-card>
+    <ion-img class="rotate-scale-up" src="assets/duoc.png"/>
+    <ion-card-header>
+      <ion-card-title>TeLlevoApp!</ion-card-title>
+    
+    </ion-card-header>
+  
+    <ion-card-content>
+      Muchas gracias por contribuir al transporte seguro de nuestros estudiantes a través de nuestra App.
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Seleccione sede para iniciar un viaje" id="sede">
+        <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
+        <ion-select-option value="Alonso de Ovalle">Alonso de Ovalle</ion-select-option>
+        <ion-select-option value="Plaza Oeste">Plaza Oeste</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Seleccione comuna de destino" id="comuna">
+        <ion-select-option value="Santiago">Santiago</ion-select-option>
+        <ion-select-option value="Providencia">Providencia</ion-select-option>
+        <ion-select-option value="Ñuñoa">Ñuñoa</ion-select-option>
+        <ion-select-option value="Macul">Macul</ion-select-option>
+        <ion-select-option value="Recoleta">Recoleta</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  
+
+
+  <ion-card>
+    <ion-card-content>
+      Seleccionar fecha y hora del viaje
+    </ion-card-content>
+  
+    <ion-card-content>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-button class="boton6"  expand="block" color="success"  [routerLink]="['/perfil']"    >Ofrecer viaje</ion-button>
+
+
+
